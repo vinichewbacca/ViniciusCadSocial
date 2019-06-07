@@ -1,4 +1,6 @@
-package br.cadastrosocial.controller;
+package br.cadastrosocial.dao;
+
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -9,21 +11,22 @@ import br.cadastrosocial.model.Estado;
 public class EstadoDAO 
 {
 	private EntityManagerFactory emf;//variavel responsavel para fazer conexão com o bd
+	private EntityManager em;
 	
-	private EntityManager getEntityManager() 
-	{/*Responsavel pelas operações do bd*/
-		return emf.createEntityManager();
-	}
+	//private EntityManager getEntityManager() 
+	//{/*Responsavel pelas operações do bd*/
+	//	return emf.createEntityManager();
+	//}
 	
 	public EstadoDAO() 
 	{
-		emf = Persistence.createEntityManagerFactory("cadSocialJPA");
+		DAO dao = new DAO();
+		em = dao.getEntity();
 	}
 	
 	/*Metodo responsavel por salvar o objeto*/
 	public void saveEstado(Estado model) 
 	{
-		EntityManager em = getEntityManager();//abre conexao com o bd
 		
 		try 
 		{
@@ -42,12 +45,10 @@ public class EstadoDAO
 	/*Metodo responsalvel por excluir o objeto*/
 	public void deleteEstado (Estado model) 
 	{
-		EntityManager em = getEntityManager();
 		
 		try 
 		{
 			em.getTransaction().begin();
-			model = em.merge(model);
 			em.remove(model);
 			em.getTransaction().commit();
 		} catch (Exception e) 
@@ -62,7 +63,6 @@ public class EstadoDAO
 	/*Metodo responsalvel por atualizar o objeto*/
 	public void editEstado(Estado model) 
 	{
-		EntityManager em = getEntityManager();
 		
 		try 
 		{
@@ -78,5 +78,16 @@ public class EstadoDAO
 		}
 	}
 	
-	/*Metodo que lista todos os objetos*/
+	/*Metodo que busca por id*/
+	public Estado getById (final int id) 
+	{
+		return em.find(Estado.class, id);
+	}
+	
+	/*Metodo para lista todos os objetos*/
+	@SuppressWarnings("unchecked")
+	public List<Estado> getAll()
+	{
+		return em.createQuery("FROM "+ Estado.class.getName()).getResultList();
+	}
 }

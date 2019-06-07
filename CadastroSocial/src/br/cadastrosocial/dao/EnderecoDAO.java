@@ -1,4 +1,4 @@
-package br.cadastrosocial.controller;
+package br.cadastrosocial.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
