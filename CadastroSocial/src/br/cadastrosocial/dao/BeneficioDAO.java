@@ -1,29 +1,24 @@
 package br.cadastrosocial.dao;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 import br.cadastrosocial.model.Beneficio;
 
 public class BeneficioDAO 
 {
-	private EntityManagerFactory emf;//variavel responsavel para fazer conexão com o bd
+	private EntityManager em;//variavel responsavel para fazer conexão com o bd
 	
-	private EntityManager getEntityManager() 
-	{/*Responsavel pelas operações do bd*/
-		return emf.createEntityManager();
-	}
+	
 	
 	public BeneficioDAO() 
 	{
-		emf = Persistence.createEntityManagerFactory("cadSocialJPA");
+		DAO dao = new DAO();
+		em = dao.getEntity();	
 	}
 	
 	/*Metodo responsavel por salvar o objeto*/
 	public void saveBeneficio(Beneficio model) 
 	{
-		EntityManager em = getEntityManager();//abre conexao com o bd
 		
 		try 
 		{
@@ -42,7 +37,6 @@ public class BeneficioDAO
 	/*Metodo responsalvel por excluir o objeto*/
 	public void deleteBeneficio (Beneficio model) 
 	{
-		EntityManager em = getEntityManager();
 		
 		try 
 		{
@@ -62,7 +56,6 @@ public class BeneficioDAO
 	/*Metodo responsalvel por atualizar o objeto*/
 	public void editBeneficio(Beneficio model) 
 	{
-		EntityManager em = getEntityManager();
 		
 		try 
 		{

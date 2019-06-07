@@ -1,29 +1,23 @@
 package br.cadastrosocial.dao;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 import br.cadastrosocial.model.Funcionario;
 
 public class FuncionarioDAO 
 {
-	private EntityManagerFactory emf;//variavel responsavel para fazer conexão com o bd
+	private EntityManager em;//variavel responsavel para fazer conexão com o bd
 	
-	private EntityManager getEntityManager() 
-	{/*Responsavel pelas operações do bd*/
-		return emf.createEntityManager();
-	}
 	
 	public FuncionarioDAO() 
 	{
-		emf = Persistence.createEntityManagerFactory("cadSocialJPA");
+		DAO dao = new DAO();
+		em = dao.getEntity();
 	}
 	
 	/*Metodo responsavel por salvar o objeto*/
 	public void saveFuncionario(Funcionario model) 
 	{
-		EntityManager em = getEntityManager();//abre conexao com o bd
 		
 		try 
 		{
@@ -42,7 +36,6 @@ public class FuncionarioDAO
 	/*Metodo responsalvel por excluir o objeto*/
 	public void deleteFuncionario (Funcionario model) 
 	{
-		EntityManager em = getEntityManager();
 		
 		try 
 		{
@@ -62,7 +55,6 @@ public class FuncionarioDAO
 	/*Metodo responsalvel por atualizar o objeto*/
 	public void editFuncionario (Funcionario model) 
 	{
-		EntityManager em = getEntityManager();
 		
 		try 
 		{

@@ -2,25 +2,18 @@ package br.cadastrosocial.dao;
 
 import javax.persistence.EntityManager;
 
-
-import br.cadastrosocial.model.Cidade;
-
-public class CidadeDAO 
+public class CrudDao 
 {
-	private EntityManager em;//variavel responsavel para fazer conexão com o bd
+	private EntityManager em;
 	
-	
-	
-	public CidadeDAO() 
+	public CrudDao() 
 	{
 		DAO dao = new DAO();
 		em = dao.getEntity();
 	}
 	
-	/*Metodo responsavel por salvar o objeto*/
-	public void saveCidade(Cidade model) 
+	public <T> void save(T model) 
 	{
-		
 		try 
 		{
 			em.getTransaction().begin();
@@ -35,14 +28,11 @@ public class CidadeDAO
 		}
 	}
 	
-	/*Metodo responsalvel por excluir o objeto*/
-	public void deleteCidade (Cidade model) 
+	public <T> void delete(T model)
 	{
-		
 		try 
 		{
 			em.getTransaction().begin();
-			model = em.merge(model);
 			em.remove(model);
 			em.getTransaction().commit();
 		} catch (Exception e) 
@@ -54,10 +44,8 @@ public class CidadeDAO
 		}
 	}
 	
-	/*Metodo responsalvel por atualizar o objeto*/
-	public void editCidade(Cidade model) 
+	public <T> void edit (T model) 
 	{
-		
 		try 
 		{
 			em.getTransaction().begin();
@@ -72,8 +60,5 @@ public class CidadeDAO
 		}
 	}
 	
-	/*Metodo que lista todos os objetos*/
-	/*Metodo que busca objeto por nome*/
-	/*Metodo que busca objeto por cpf*/
-	/*Metodo que busca objeto por n*/
+	
 }
