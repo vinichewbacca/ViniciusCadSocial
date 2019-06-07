@@ -10,14 +10,10 @@ import br.cadastrosocial.model.Estado;
 
 public class EstadoDAO 
 {
-	private EntityManagerFactory emf;//variavel responsavel para fazer conexão com o bd
+	
 	private EntityManager em;
 	
-	//private EntityManager getEntityManager() 
-	//{/*Responsavel pelas operações do bd*/
-	//	return emf.createEntityManager();
-	//}
-	
+		
 	public EstadoDAO() 
 	{
 		DAO dao = new DAO();
