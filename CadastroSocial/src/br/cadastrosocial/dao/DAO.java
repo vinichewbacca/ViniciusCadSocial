@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import org.hibernate.Session;
+
 /*Essa classe responsavel por salvar algo ela busca a entity
  * se existir ela usa a mesma caso não tenha ela cria nova*/
 public class DAO 

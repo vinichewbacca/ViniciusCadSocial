@@ -5,6 +5,7 @@ import java.util.Collection;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -13,6 +14,7 @@ import javax.persistence.Table;
 public class Funcionario extends Pessoa 
 {
 	
+	@GeneratedValue
 	private int idFuncionario;
 	private String cargo;
 	private LocalDate dataAdmissao;
