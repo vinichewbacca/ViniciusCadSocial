@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class Funcionario extends Pessoa 
 {
 	
-	@GeneratedValue
+	
 	private int idFuncionario;
 	private String cargo;
 	private LocalDate dataAdmissao;

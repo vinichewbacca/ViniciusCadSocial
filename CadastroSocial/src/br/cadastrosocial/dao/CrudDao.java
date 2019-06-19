@@ -1,7 +1,8 @@
 package br.cadastrosocial.dao;
 
 import javax.persistence.EntityManager;
-
+/*Classe generica para realizar o CRUD
+ *salva edita e exclui e lista*/
 public class CrudDao 
 {
 	private EntityManager em;
@@ -12,6 +13,7 @@ public class CrudDao
 		em = dao.getEntity();
 	}
 	
+	/*metodo responsavel por salvar o modelo*/
 	public <T> void save(T model) 
 	{
 		try 
@@ -28,6 +30,7 @@ public class CrudDao
 		}
 	}
 	
+	/*metodo para deletar seu modelo*/
 	public <T> void delete(T model)
 	{
 		try 
@@ -44,6 +47,7 @@ public class CrudDao
 		}
 	}
 	
+	/*metodo para editar o modelo*/
 	public <T> void edit (T model) 
 	{
 		try 
