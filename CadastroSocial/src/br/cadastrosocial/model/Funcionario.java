@@ -14,8 +14,6 @@ import javax.persistence.Table;
 public class Funcionario extends Pessoa 
 {
 	
-	
-	private int idFuncionario;
 	private String cargo;
 	private LocalDate dataAdmissao;
 	private String matricula, email,loginFuncionario,senhaFuncionario;
@@ -26,12 +24,7 @@ public class Funcionario extends Pessoa
 	
 	
 	/*metodos geters/seters*/
-	public int getIdFuncionario() {
-		return idFuncionario;
-	}
-	public void setIdFuncionario(int idFuncionario) {
-		this.idFuncionario = idFuncionario;
-	}
+	
 	public String getCargo() {
 		return cargo;
 	}

@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class Usuario extends Pessoa
 {
 	
-	private int idUsuario;
+	
 	private int nis;
 	private double renda;
 	private String pai, mae;
@@ -35,12 +35,7 @@ public class Usuario extends Pessoa
 		this.beneficioUsu = beneficioUsu;
 	}
 	/*metodos geter/seters*/
-	public int getIdUsuario() {
-		return idUsuario;
-	}
-	public void setIdUsuario(int idUsuario) {
-		this.idUsuario = idUsuario;
-	}
+	
 	public int getNis() {
 		return nis;
 	}
