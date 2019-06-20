@@ -1,6 +1,10 @@
 package br.cadastrosocial.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
+
+import br.cadastrosocial.model.Estado;
 /*Classe generica para realizar o CRUD
  *salva edita e exclui e lista*/
 public class CrudDao 
@@ -62,6 +66,12 @@ public class CrudDao
 		{
 			em.close();
 		}
+	}
+	
+	/*metodo para listar todos os estados*/
+	public List<Estado> listaEstado()
+	{
+		return em.createQuery("FROM " + Estado.class.getName()).getResultList();
 	}
 	
 	

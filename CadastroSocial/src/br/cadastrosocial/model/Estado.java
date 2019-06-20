@@ -50,6 +50,12 @@ public class Estado
 	public void setCidade(Collection<Cidade> cidade) {
 		this.cidade = cidade;
 	}
+	@Override
+	public String toString() {
+		return getUf();
+	}
+	
+	
 	
 	
 }
