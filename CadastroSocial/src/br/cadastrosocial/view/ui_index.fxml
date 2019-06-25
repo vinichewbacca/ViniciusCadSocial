@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuButton fx:id="mbtnSistema" layoutX="53.0" layoutY="37.0" mnemonicParsing="false" text="Usuário do Sistema" textFill="#4059a9" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Alterar Senha" />
+          <MenuItem mnemonicParsing="false" text="Sair" />
+        </items>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </MenuButton>
+   </children>
+</AnchorPane>

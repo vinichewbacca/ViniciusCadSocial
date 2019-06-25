@@ -32,7 +32,7 @@ public class CadastroSocialStart extends Application
 	@Override
 	public void start(Stage primaryStage) throws Exception 
 	{
-		Parent root = FXMLLoader.load(getClass().getResource("../view/ui_cadCidade.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("../view/ui_cadFuncionario.fxml"));
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);
 		primaryStage.show();
