@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.cadastrosocial.controller.CadUsuarioControler">
    <children>
       <TabPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.5" AnchorPane.leftAnchor="0.5" AnchorPane.rightAnchor="0.5" AnchorPane.topAnchor="50.0">
         <tabs>
@@ -45,7 +46,7 @@
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtPai1" labelFloat="true" layoutX="414.0" layoutY="170.0" prefHeight="32.0" prefWidth="363.0" promptText="Mãe" AnchorPane.leftAnchor="424.0" AnchorPane.topAnchor="170.0">
+                        <JFXTextField fx:id="txtMae" labelFloat="true" layoutX="414.0" layoutY="170.0" prefHeight="32.0" prefWidth="363.0" promptText="Mãe" AnchorPane.leftAnchor="424.0" AnchorPane.topAnchor="170.0">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
@@ -63,7 +64,7 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <JFXComboBox fx:id="cbEstado" labelFloat="true" layoutX="14.0" layoutY="26.0" prefHeight="32.0" prefWidth="132.0" promptText="Estado" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+                        <JFXComboBox fx:id="cbEstado" labelFloat="true" layoutX="14.0" layoutY="26.0" onAction="#carregaCidadeTeste" prefHeight="32.0" prefWidth="132.0" promptText="Estado" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
                         <JFXComboBox fx:id="cbCidade" labelFloat="true" layoutX="30.0" layoutY="40.0" prefHeight="32.0" prefWidth="150.0" promptText="Cidade" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="30.0" />
                         <JFXTextField fx:id="txtLogradouro" labelFloat="true" layoutX="337.0" layoutY="46.0" prefHeight="32.0" prefWidth="447.0" promptText="Logradouro" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
                            <font>
@@ -97,27 +98,27 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <JFXTextField fx:id="txtLuz" labelFloat="true" prefHeight="32.0" prefWidth="180.0" promptText="Energia Elétrica R$" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0">
+                        <JFXTextField fx:id="txtLuz" labelFloat="true" prefHeight="32.0" prefWidth="180.0" promptText="Energia Elétrica R$" text="0.00" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtAgua" labelFloat="true" layoutX="30.0" layoutY="40.0" prefHeight="32.0" prefWidth="180.0" promptText="Agua/Esgoto R$" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="30.0">
+                        <JFXTextField fx:id="txtAgua" labelFloat="true" layoutX="30.0" layoutY="40.0" prefHeight="32.0" prefWidth="180.0" promptText="Agua/Esgoto R$" text="0.00" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="30.0">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtAluguel" labelFloat="true" layoutX="220.0" layoutY="40.0" prefHeight="32.0" prefWidth="180.0" promptText="Aluguel R$" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="30.0">
+                        <JFXTextField fx:id="txtAluguel" labelFloat="true" layoutX="220.0" layoutY="40.0" prefHeight="32.0" prefWidth="180.0" promptText="Aluguel R$" text="0.00" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="30.0">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtAlimentacao" labelFloat="true" layoutX="410.0" layoutY="40.0" prefHeight="32.0" prefWidth="180.0" promptText="Alimentação R$" AnchorPane.leftAnchor="590.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
+                        <JFXTextField fx:id="txtAlimentacao" labelFloat="true" layoutX="410.0" layoutY="40.0" prefHeight="32.0" prefWidth="180.0" promptText="Alimentação R$" text="0.00" AnchorPane.leftAnchor="590.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtTotalGastos" disable="true" editable="false" labelFloat="true" layoutX="30.0" layoutY="40.0" prefHeight="32.0" prefWidth="180.0" promptText="Total de Gastos R$" text="00,00" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0">
+                        <JFXTextField fx:id="txtTotalGastos" editable="false" labelFloat="true" layoutX="30.0" layoutY="40.0" onAction="#somaGastos" prefHeight="32.0" prefWidth="180.0" promptText="Total de Gastos R$" text="00,00" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
@@ -127,17 +128,39 @@
             </Tab>
             <Tab text="Beneficios">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <JFXCheckBox fx:id="checkBF" checkedColor="GOLD" layoutX="14.0" layoutY="44.0" text="Bolsa Família " textFill="#4059a9" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="592.0" AnchorPane.topAnchor="45.0">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="checkVr" checkedColor="#4059a9" layoutX="30.0" layoutY="55.0" text="Vale Renda" textFill="#4059a9" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="592.0" AnchorPane.topAnchor="45.0">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="checkBpcIdoso" layoutX="30.0" layoutY="55.0" text="BPC - Idoso" textFill="#4059a9" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="592.0" AnchorPane.topAnchor="100.0">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="checkBpcPcd" layoutX="360.0" layoutY="55.0" text="BPC - PCD" textFill="#4059a9" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="592.0" AnchorPane.topAnchor="100.0">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXCheckBox>
+                     </children></AnchorPane>
                </content>
             </Tab>
         </tabs>
       </TabPane>
-      <Button fx:id="btnSaveUsuario" defaultButton="true" layoutX="300.0" layoutY="14.0" mnemonicParsing="false" text="Salvar" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="14.0">
+      <Button fx:id="btnSaveUsuario" defaultButton="true" layoutX="300.0" layoutY="14.0" mnemonicParsing="false" onAction="#salvaUsuario" text="Salvar" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="brnCancelUsuario" cancelButton="true" layoutX="310.0" layoutY="24.0" mnemonicParsing="false" text="Cancelar" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="14.0">
+      <Button fx:id="brnCancelUsuario" cancelButton="true" layoutX="310.0" layoutY="24.0" mnemonicParsing="false" onAction="#cancelaTela" text="Cancelar" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

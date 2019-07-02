@@ -1,5 +1,6 @@
 package br.cadastrosocial.controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -13,8 +14,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 public class CadFuncionarioControler implements Initializable {
 
@@ -46,7 +51,7 @@ public class CadFuncionarioControler implements Initializable {
     private JFXTextField txtMatricula;
 
     @FXML
-    private JFXTextField txtCargo;
+    private JFXComboBox<String> cbCargo;
 
     @FXML
     private JFXTextField txtEmail;
@@ -66,8 +71,7 @@ public class CadFuncionarioControler implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) 
 	{
-		carregaGenero();
-		carregaEstadoCivil();
+		carregaCombo();
 		
 	}
 	
@@ -82,7 +86,7 @@ public class CadFuncionarioControler implements Initializable {
 		func.setEstadoCivil(cbEstadoCivilFunc.getValue());
 		func.setDataAdmissao(dtpDataAdmissao.getValue());
 		func.setMatricula(txtMatricula.getText());
-		func.setCargo(txtCargo.getText());
+		func.setCargo(cbCargo.getValue());
 		func.setEmail(txtEmail.getText());
 		func.setLoginFuncionario(txtLogin.getText());
 		func.setSenhaFuncionario(txtSenha.getText());
@@ -90,18 +94,29 @@ public class CadFuncionarioControler implements Initializable {
 		cd.save(func);
     }
 	
-	private void carregaGenero() 
+	@FXML
+    void cancelaTela(ActionEvent event) throws IOException 
+    {
+    	Stage stage = (Stage) btnCancelarFunc.getScene().getWindow();
+    	Parent root = FXMLLoader.load(getClass().getResource("../view/ui_principal.fxml"));
+    	Scene scene = new Scene(root);
+    	stage.setTitle("CADSocial");
+    	stage.setScene(scene);
+    	stage.show();
+    }
+	
+	private void carregaCombo() 
 	{
 		ObservableList<String> genero = FXCollections.observableArrayList("Masculino","Feminino","Outro");
+		ObservableList<String> cargo = FXCollections.observableArrayList("Assistente Social","Psicólogo");
 		cbGeneroFunc.setItems(genero.sorted());
+		cbCargo.setItems(cargo);
+		ObservableList<String> estadoCivil = FXCollections.observableArrayList("Solteira(o)","Casada(o)","Viúva(o)",
+				"Separada(o)","Amasiada(o)");
+		cbEstadoCivilFunc.setItems(estadoCivil.sorted());
 		
 	}
 
-	private void carregaEstadoCivil() 
-	{
-		ObservableList<String> estadoCivil = FXCollections.observableArrayList("Solteira(o)","Casada(o)","Viúva(o)",
-				"Separada(o)","Amasiada(o)");
-		cbEstadoCivilFunc.setItems(estadoCivil.sorted());	
-	}
+	
 
 }

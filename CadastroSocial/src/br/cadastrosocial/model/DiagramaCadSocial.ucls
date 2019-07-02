@@ -29,16 +29,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="br.cadastrosocial.model.Beneficio" project="CadastroSocial" 
-    file="/CadastroSocial/src/br/cadastrosocial/model/Beneficio.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1069" y="1151"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="br.cadastrosocial.model.Login" project="CadastroSocial" 
+  <class id="4" language="java" name="br.cadastrosocial.model.Login" project="CadastroSocial" 
     file="/CadastroSocial/src/br/cadastrosocial/model/Login.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="312" y="79"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -47,7 +38,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="br.cadastrosocial.model.Pessoa" project="CadastroSocial" 
+  <class id="5" language="java" name="br.cadastrosocial.model.Pessoa" project="CadastroSocial" 
     file="/CadastroSocial/src/br/cadastrosocial/model/Pessoa.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="694" y="164"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -56,7 +47,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="br.cadastrosocial.model.Cidade" project="CadastroSocial" 
+  <class id="6" language="java" name="br.cadastrosocial.model.Cidade" project="CadastroSocial" 
     file="/CadastroSocial/src/br/cadastrosocial/model/Cidade.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1682" y="54"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -65,7 +56,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="br.cadastrosocial.model.Estado" project="CadastroSocial" 
+  <class id="7" language="java" name="br.cadastrosocial.model.Estado" project="CadastroSocial" 
     file="/CadastroSocial/src/br/cadastrosocial/model/Estado.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1691" y="392"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -74,7 +65,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="br.cadastrosocial.model.Funcionario" project="CadastroSocial" 
+  <class id="8" language="java" name="br.cadastrosocial.model.Funcionario" project="CadastroSocial" 
     file="/CadastroSocial/src/br/cadastrosocial/model/Funcionario.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="294" y="612"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -83,7 +74,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="br.cadastrosocial.model.Gastos" project="CadastroSocial" 
+  <class id="9" language="java" name="br.cadastrosocial.model.Gastos" project="CadastroSocial" 
     file="/CadastroSocial/src/br/cadastrosocial/model/Gastos.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1472" y="604"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -92,112 +83,134 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="11">    
-    <bendpoint x="1226" y="930"/>    
-    <bendpoint x="1218" y="677"/>    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="12" name="idUsuario">        
+  <class id="10" language="java" name="br.cadastrosocial.model.BeneficioSolicitado" project="CadastroSocial" 
+    file="/CadastroSocial/src/br/cadastrosocial/model/BeneficioSolicitado.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="209" y="1138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="br.cadastrosocial.model.Beneficio" project="CadastroSocial" 
+    file="/CadastroSocial/src/br/cadastrosocial/model/Beneficio.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1427" y="1143"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="12">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="13" name="idEstado">        
+        <position height="0" width="0" x="1370" y="-1813"/>      
+      </attribute>      
+      <multiplicity id="14" minimum="0" maximum="1">        
+        <position height="0" width="0" x="1370" y="-1813"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="15">    
+    <bendpoint x="1101" y="1141"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="16" name="idUsuario"/>      
+      <multiplicity id="17" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="18">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="19">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="20" name="idUsuario">        
         <position height="0" width="0" x="42" y="42"/>      
       </attribute>      
-      <multiplicity id="13" minimum="0" maximum="1">        
+      <multiplicity id="21" minimum="0" maximum="1">        
         <position height="0" width="0" x="42" y="42"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="14">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="15" name="idEstado">        
-        <position height="0" width="0" x="1370" y="-1813"/>      
+  <association id="22">    
+    <bendpoint x="1427" y="918"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="23" name="beneficioUsu"/>      
+      <multiplicity id="24" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="25">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="26" name="idAtendimento">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="16" minimum="0" maximum="1">        
-        <position height="0" width="0" x="1370" y="-1813"/>      
+      <multiplicity id="27" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="28">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="29" name="idFuncionario">        
+        <position height="0" width="0" x="-48" y="38"/>      
+      </attribute>      
+      <multiplicity id="30" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-48" y="38"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="17">    
+  <association id="31">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="32" name="idCidade">        
+        <position height="0" width="0" x="1361" y="-1879"/>      
+      </attribute>      
+      <multiplicity id="33" minimum="0" maximum="1">        
+        <position height="0" width="0" x="1361" y="-1879"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="34">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="18" name="idEndereco">        
+      <attribute id="35" name="idGastos">        
+        <position height="0" width="0" x="401" y="-453"/>      
+      </attribute>      
+      <multiplicity id="36" minimum="0" maximum="1">        
+        <position height="0" width="0" x="401" y="-453"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="37">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="38" name="idEndereco">        
         <position height="0" width="0" x="818" y="-810"/>      
       </attribute>      
-      <multiplicity id="19" minimum="0" maximum="1">        
+      <multiplicity id="39" minimum="0" maximum="1">        
         <position height="0" width="0" x="818" y="-810"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="20">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="21" name="idUsuario">        
-        <position height="0" width="0" x="42" y="42"/>      
-      </attribute>      
-      <multiplicity id="22" minimum="0" maximum="1">        
-        <position height="0" width="0" x="42" y="42"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="23">    
+  <generalization id="40">    
     <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="6"/>  
+    <end type="TARGET" refId="5"/>  
   </generalization>  
-  <generalization id="24">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
-  <association id="25">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="26" name="idFuncionario">        
-        <position height="0" width="0" x="-48" y="38"/>      
-      </attribute>      
-      <multiplicity id="27" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-48" y="38"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="28">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="29" name="idCidade">        
-        <position height="0" width="0" x="1361" y="-1879"/>      
-      </attribute>      
-      <multiplicity id="30" minimum="0" maximum="1">        
-        <position height="0" width="0" x="1361" y="-1879"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="31">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="32" name="idGastos">        
-        <position height="0" width="0" x="401" y="-453"/>      
-      </attribute>      
-      <multiplicity id="33" minimum="0" maximum="1">        
-        <position height="0" width="0" x="401" y="-453"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="34">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="35" name="idAtendimento">        
-        <position height="0" width="0" x="235" y="730"/>      
-      </attribute>      
-      <multiplicity id="36" minimum="0" maximum="1">        
-        <position height="0" width="0" x="235" y="730"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

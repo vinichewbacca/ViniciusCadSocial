@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.cadastrosocial.controller.BuscaAtendimentoControler">
+   <children>
+      <JFXTextField fx:id="txtBusca" labelFloat="true" layoutX="161.0" layoutY="14.0" prefHeight="32.0" promptText="Nome Usuário " unFocusColor="#4059a9" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <Button fx:id="btnBuscaAtendimento" defaultButton="true" layoutX="713.0" layoutY="40.0" mnemonicParsing="false" onAction="#buscaAtendimento" prefHeight="32.0" text="Buscar" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="676.0" layoutY="33.0" mnemonicParsing="false" onAction="#cancelaTela" prefHeight="32.0" prefWidth="104.0" text="Cancelar" visible="true" AnchorPane.leftAnchor="676.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <JFXListView fx:id="listAtendimentos" layoutX="20.0" layoutY="70.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0" />
+   </children>
+</AnchorPane>

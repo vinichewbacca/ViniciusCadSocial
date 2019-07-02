@@ -5,6 +5,8 @@ import java.util.Collection;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -65,6 +67,11 @@ public class Funcionario extends Pessoa
 	}
 	public void setSenhaFuncionario(String senhaFuncionario) {
 		this.senhaFuncionario = senhaFuncionario;
+	}
+	@Override
+	public String toString() {
+		
+		return getNome()+" -- "+getCargo()+" -- "+getEmail();
 	}
 	
 	

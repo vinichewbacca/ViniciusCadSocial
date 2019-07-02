@@ -6,7 +6,7 @@
 
 	<persistence-unit name="cadSocialJPA"
 		transaction-type="RESOURCE_LOCAL">
-		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<class>br.cadastrosocial.model.Estado</class>
 		<class>br.cadastrosocial.model.Gastos</class>
 		<class>br.cadastrosocial.model.Cidade</class>
@@ -16,6 +16,7 @@
 		<class>br.cadastrosocial.model.Funcionario</class>
 		<class>br.cadastrosocial.model.Pessoa</class>
 		<class>br.cadastrosocial.model.Usuario</class>
+		<class>br.cadastrosocial.model.BeneficioSolicitado</class>
 
 		<properties>
 			<!-- dados da conexao -->

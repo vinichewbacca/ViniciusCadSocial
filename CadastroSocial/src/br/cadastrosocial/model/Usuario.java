@@ -14,7 +14,7 @@ public class Usuario extends Pessoa
 {
 	
 	
-	private int nis;
+	private String nis;
 	private double renda;
 	private String pai, mae;
 	/*mapear chaves esntrangeiras*/
@@ -36,10 +36,10 @@ public class Usuario extends Pessoa
 	}
 	/*metodos geter/seters*/
 	
-	public int getNis() {
+	public String getNis() {
 		return nis;
 	}
-	public void setNis(int nis) {
+	public void setNis(String nis) {
 		this.nis = nis;
 	}
 	public double getRenda() {
@@ -78,6 +78,12 @@ public class Usuario extends Pessoa
 	public void setAtendimentoUsu(Collection<Atendimento> atendimentoUsu) {
 		this.atendimentoUsu = atendimentoUsu;
 	}
+	@Override
+	public String toString() {
+		
+		return "Nome:"+getNome()+" -- Bairro: "+getIdEndereco().getBairro();
+	}
 	
+ 
 	
 }

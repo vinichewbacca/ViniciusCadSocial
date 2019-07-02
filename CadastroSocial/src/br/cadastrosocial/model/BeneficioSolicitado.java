@@ -8,22 +8,18 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_beneficio")
-public class Beneficio 
+@Table(name = "tb_beneficioSolicitado")
+public class BeneficioSolicitado 
 {
 	@Id
 	@GeneratedValue
 	private int idBeneficio;
 	private String nomeBeneficio;
 	private String tipoBeneficio;
-	/*mapear estrangeiras*/
 	@ManyToOne
-	@JoinColumn(name = "idUsuario", nullable = false)
-	private Usuario idUsuario;
+	@JoinColumn(name = "idAtendimento", nullable = false)
+	private Atendimento idAtendimento;
 	
-	
-	
-	/*metodos geters/seters*/
 	public int getIdBeneficio() {
 		return idBeneficio;
 	}
@@ -42,11 +38,11 @@ public class Beneficio
 	public void setTipoBeneficio(String tipoBeneficio) {
 		this.tipoBeneficio = tipoBeneficio;
 	}
-	public Usuario getIdUsuario() {
-		return idUsuario;
+	public Atendimento getIdAtendimento() {
+		return idAtendimento;
 	}
-	public void setIdUsuario(Usuario idUsuario) {
-		this.idUsuario = idUsuario;
+	public void setIdAtendimento(Atendimento idAtendimento) {
+		this.idAtendimento = idAtendimento;
 	}
 	
 	

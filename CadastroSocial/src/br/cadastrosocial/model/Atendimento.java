@@ -22,6 +22,8 @@ public class Atendimento
 	private LocalDate dataAtendimento;
 	private String tipoAtendimento;
 	private String relatotrioAtendimento;
+	private String relatoAtendimento;
+	
 	/*mapear chaves estrangeiras*/
 	@ManyToOne
 	@JoinColumn(name = "idFuncionario",nullable = false)
@@ -29,8 +31,9 @@ public class Atendimento
 	@ManyToOne
 	@JoinColumn(name = "idUsuario", nullable = false)
 	private Usuario idUsuario;
+	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idAtendimento")
-	private Collection<Beneficio> beneficioAtd;
+	private Collection<BeneficioSolicitado> beneficioAtd;//representa o beneficios a ser realizado
 	
 	
 	/*metodos geters/seters*/
@@ -70,10 +73,11 @@ public class Atendimento
 	public void setRelatotrioAtendimento(String relatotrioAtendimento) {
 		this.relatotrioAtendimento = relatotrioAtendimento;
 	}
-	public Collection<Beneficio> getBeneficioAtd() {
+	
+	public Collection<BeneficioSolicitado> getBeneficioAtd() {
 		return beneficioAtd;
 	}
-	public void setBeneficioAtd(Collection<Beneficio> beneficioAtd) {
+	public void setBeneficioAtd(Collection<BeneficioSolicitado> beneficioAtd) {
 		this.beneficioAtd = beneficioAtd;
 	}
 	

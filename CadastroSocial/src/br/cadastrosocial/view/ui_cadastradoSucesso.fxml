@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="226.0" prefWidth="455.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="br.cadastrosocial.controller.TelaOk">
+   <children>
+      <ImageView fitHeight="129.0" fitWidth="129.0" layoutX="30.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0">
+         <image>
+            <Image url="@img/cadastroSucesso.png" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_LEFT" layoutX="192.0" layoutY="49.0" prefHeight="89.0" prefWidth="239.0" text="Usuário cadastrado com sucesso!" textAlignment="CENTER" textFill="#4059a9" wrapText="true">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnOK" defaultButton="true" layoutX="281.0" layoutY="152.0" mnemonicParsing="false" onAction="#cancelaTela" text="Ok ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -57,6 +57,10 @@ public class Cidade
 	public void setEndereco(Collection<Endereco> endereco) {
 		this.endereco = endereco;
 	}
+	@Override
+	public String toString() {
+		return getNomeCidade();
+	}
 	
 	
 }
